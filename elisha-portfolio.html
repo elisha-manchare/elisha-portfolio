@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elisha Manchare | IT Professional & Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Elisha Charles Manchare — IT professional, network administrator, and full-stack developer based in Mwanza, Tanzania. Founder of Buga Tech Solutions.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071229'/%3E%3Ctext x='32' y='43' font-family='JetBrains Mono,monospace' font-weight='700' font-size='28' fill='%2329D3E8' text-anchor='middle'%3EEM%3C/text%3E%3C/svg%3E">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --navy-900: #071229;
+  --navy-800: #0C1C3B;
+  --navy-700: #122A52;
+  --blue-400: #4E8FF2;
+  --blue-500: #1E52C8;
+  --blue-600: #163F9C;
+  --cyan: #29D3E8;
+  --green: #29D97A;
+  --gray-50: #F5F7FA;
+  --gray-100: #E9EDF2;
+  --gray-500: #6B7686;
+  --gray-800: #1E2733;
+  --white: #FFFFFF;
+  --bg: var(--white);
+  --bg-alt: var(--gray-50);
+  --surface: var(--white);
+  --text: var(--gray-800);
+  --text-soft: var(--gray-500);
+  --border: var(--gray-100);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, .brand-font { font-family: 'Space Grotesk', sans-serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+section { padding: 96px 0; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 500;
+  color: var(--blue-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;
+}
+.eyebrow::before { content: '//'; color: var(--cyan); }
+.section-head { max-width: 620px; margin-bottom: 52px; }
+.section-head h2 { font-size: 32px; font-weight: 700; margin-bottom: 10px; }
+.section-head p { color: var(--text-soft); font-size: 15px; }
+.reveal { animation: fadeUp 0.7s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s ease; }
+.btn-primary { background: var(--blue-500); color: #fff; }
+.btn-primary:hover { background: var(--blue-600); transform: translateY(-1px); }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+.btn-outline:hover { border-color: var(--blue-500); color: var(--blue-500); }
+.btn-light { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.3); color: #fff; }
+.btn-light:hover { background: rgba(255,255,255,0.18); }
+
+/* NAV */
+.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; background: var(--navy-900); border-bottom: 1px solid var(--navy-700); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1140px; margin: 0 auto; }
+.logo { font-size: 16px; font-weight: 700; color: #fff; }
+.logo span { color: var(--cyan); }
+.nav-links { display: flex; gap: 26px; }
+.nav-links a { font-size: 13.5px; color: #AEBBD4; font-family: 'JetBrains Mono', monospace; }
+.nav-links a:hover { color: var(--cyan); }
+@media (max-width: 720px) { .nav-links { display: none; } }
+
+/* HERO — terminal signature element */
+.hero { background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%); padding: 150px 0 90px; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 44px; align-items: center; }
+.hero-tag { color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; margin-bottom: 14px; }
+.hero h1 { font-size: 44px; font-weight: 700; color: #fff; line-height: 1.14; margin-bottom: 18px; }
+.hero h1 span { color: var(--blue-400); }
+.hero p { color: #AEB9C7; font-size: 16px; max-width: 460px; margin-bottom: 30px; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-badges { display: flex; gap: 22px; flex-wrap: wrap; }
+.hero-badges div strong { display: block; color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 20px; }
+.hero-badges div span { font-size: 12px; color: #8291A3; }
+
+.terminal {
+  background: #0A1526; border-radius: 12px; border: 1px solid var(--navy-700);
+  box-shadow: 0 30px 70px rgba(3,10,25,0.5); overflow: hidden; font-family: 'JetBrains Mono', monospace;
+}
+.terminal-bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; background: #0D1C33; border-bottom: 1px solid var(--navy-700); }
+.terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+.terminal-bar .t1 { background: #FF5F57; } .terminal-bar .t2 { background: #FEBC2E; } .terminal-bar .t3 { background: #28C840; }
+.terminal-title { margin-left: 8px; font-size: 12px; color: #7C8AA0; }
+.terminal-body { padding: 22px 20px; font-size: 13.5px; line-height: 1.9; color: #C7D2E0; }
+.terminal-body .prompt { color: var(--green); }
+.terminal-body .path { color: var(--cyan); }
+.terminal-body .cmd { color: #fff; }
+.terminal-body .out { color: #93A2B8; padding-left: 4px; }
+.terminal-body .key { color: var(--blue-400); }
+.cursor { display: inline-block; width: 7px; height: 15px; background: var(--cyan); vertical-align: middle; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.about-photo { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.about-photo img { width: 100%; height: 360px; object-fit: cover; }
+.about-text p { color: var(--text-soft); font-size: 15px; margin-bottom: 14px; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip { font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 6px 12px; border-radius: 20px; background: var(--bg-alt); border: 1px solid var(--border); color: var(--text-soft); }
+
+/* SKILLS */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.skill-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(7,18,41,0.1); border-color: var(--blue-400); }
+.skill-card h3 { font-size: 16px; margin-bottom: 12px; }
+.skill-bar-row { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--text-soft); margin: 10px 0 5px; }
+.skill-bar { height: 6px; border-radius: 4px; background: var(--bg-alt); overflow: hidden; }
+.skill-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--blue-500), var(--cyan)); border-radius: 4px; }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 28px; border-left: 2px solid var(--border); }
+.tl-item { position: relative; padding-bottom: 34px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before { content: ''; position: absolute; left: -34px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--blue-500); border: 3px solid var(--surface); box-shadow: 0 0 0 2px var(--blue-400); }
+.tl-item .tl-date { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--blue-500); margin-bottom: 4px; }
+.tl-item h3 { font-size: 16.5px; margin-bottom: 4px; }
+.tl-item p { color: var(--text-soft); font-size: 14px; }
+
+/* PROJECTS */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+.project-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(7,18,41,0.13); }
+.project-thumb { height: 170px; overflow: hidden; position: relative; }
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.project-card:hover .project-thumb img { transform: scale(1.06); }
+.project-tag { position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.92); color: var(--navy-900); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; font-family: 'JetBrains Mono', monospace; }
+.project-body { padding: 18px 20px 22px; }
+.project-body h3 { font-size: 16px; margin-bottom: 8px; }
+.project-body p { font-size: 13.5px; color: var(--text-soft); margin-bottom: 10px; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 6px; }
+.project-stack span { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--blue-500); background: var(--bg-alt); padding: 3px 8px; border-radius: 5px; }
+
+/* CLIENT WORK / BUGA TECH */
+.client-band { background: var(--navy-900); color: #fff; }
+.client-band .section-head p { color: #8291A3; }
+.client-band .eyebrow { color: var(--cyan); }
+.client-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.client-card { background: var(--navy-800); border: 1px solid var(--navy-700); border-radius: 12px; padding: 22px; transition: transform 0.25s ease, border-color 0.25s ease; }
+.client-card:hover { transform: translateY(-4px); border-color: var(--blue-400); }
+.client-card h3 { font-size: 15.5px; margin-bottom: 8px; color: #fff; }
+.client-card p { font-size: 13px; color: #93A2B8; }
+.client-cta { margin-top: 40px; text-align: center; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.contact-list { display: flex; flex-direction: column; gap: 16px; }
+.contact-item { display: flex; gap: 14px; align-items: flex-start; }
+.contact-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--bg-alt); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--blue-500); flex-shrink: 0; }
+.contact-item strong { display: block; font-size: 14px; }
+.contact-item a, .contact-item span { font-size: 13.5px; color: var(--text-soft); }
+.contact-item a:hover { color: var(--blue-500); }
+.social-row { display: flex; gap: 10px; margin-top: 22px; }
+.social-row a { width: 36px; height: 36px; border-radius: 50%; background: var(--bg-alt); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text); transition: all 0.2s ease; }
+.social-row a:hover { background: var(--blue-500); color: #fff; border-color: var(--blue-500); }
+
+/* FOOTER */
+footer { background: var(--navy-900); color: #8291A3; padding: 34px 0; text-align: center; font-size: 13px; }
+footer strong { color: #fff; }
+
+@media (max-width: 900px) {
+  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 32px; }
+  section { padding: 70px 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Elisha<span>.dev</span></a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+      <a href="#work">client-work</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-tag">Mwanza, Tanzania</div>
+      <h1>Elisha Manchare —<br><span>IT Professional</span> &amp; Full-Stack Developer</h1>
+      <p>I build networks, websites, and support systems that work reliably from day one. Founder of Buga Tech Solutions, with hands-on experience across networking, web development, and IT support.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-light">Get In Touch</a>
+      </div>
+      <div class="hero-badges">
+        <div><strong>4+</strong><span>Major Projects Shipped</span></div>
+        <div><strong>2</strong><span>Languages — EN / SW</span></div>
+        <div><strong>2024</strong><span>IT Diploma, CBE Mwanza</span></div>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot t1"></span><span class="terminal-dot t2"></span><span class="terminal-dot t3"></span>
+        <span class="terminal-title">elisha@buga-tech: ~</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="prompt">elisha@mwanza</span><span class="path">:~$</span> <span class="cmd">whoami</span></div>
+        <div class="out">Elisha Charles Manchare — IT Professional</div>
+        <div><span class="prompt">elisha@mwanza</span><span class="path">:~$</span> <span class="cmd">cat skills.txt</span></div>
+        <div class="out">Networking · Web Dev · PHP/MySQL · React · Node.js</div>
+        <div><span class="prompt">elisha@mwanza</span><span class="path">:~$</span> <span class="cmd">./deploy</span> <span class="key">--project</span> buga-tech</div>
+        <div class="out">✓ Build complete. Status: <span style="color:var(--green)">live</span></div>
+        <div><span class="prompt">elisha@mwanza</span><span class="path">:~$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">About</div>
+      <h2>Behind the Screen</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="IT professional working at a desk with network equipment" loading="lazy">
+      </div>
+      <div class="about-text reveal">
+        <p>I'm an IT professional based in Mwanza, Tanzania, with a diploma in Information Technology from the College of Business Education (CBE) Mwanza (2022–2024). My field attachment as an Assistant Network Administrator at Barmedas.com Ltd gave me hands-on experience with LAN setup, fiber optics, and enterprise networking.</p>
+        <p>Beyond networking, I design and build full-stack web applications — from booking systems to hospital management platforms — and founded Buga Tech Solutions to bring affordable, reliable IT services to businesses and individuals across Tanzania.</p>
+        <div class="chip-row">
+          <span class="chip">Networking &amp; Subnetting</span>
+          <span class="chip">PHP / MySQL</span>
+          <span class="chip">React / Node.js</span>
+          <span class="chip">CCTV Systems</span>
+          <span class="chip">IT Support &amp; Training</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Skills</div>
+      <h2>What I Work With</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3>Networking</h3>
+        <div class="skill-bar-row"><span>LAN/WAN, Subnetting, Fiber</span><span>90%</span></div>
+        <div class="skill-bar"><span style="width:90%;"></span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Web Development</h3>
+        <div class="skill-bar-row"><span>HTML/CSS/JS, React, Node</span><span>85%</span></div>
+        <div class="skill-bar"><span style="width:85%;"></span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Backend &amp; Databases</h3>
+        <div class="skill-bar-row"><span>PHP, MySQL, SQLite</span><span>85%</span></div>
+        <div class="skill-bar"><span style="width:85%;"></span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>IT Support &amp; Systems</h3>
+        <div class="skill-bar-row"><span>Windows Admin, Repair, CCTV</span><span>88%</span></div>
+        <div class="skill-bar"><span style="width:88%;"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Experience &amp; Education</div>
+      <h2>My Path So Far</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-date">2024 — Present</div>
+        <h3>Founder, Buga Tech Solutions</h3>
+        <p>Running an IT services company offering networking, web design, software support, computer repairs, CCTV installation, and technical training.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-date">2023 — 2024</div>
+        <h3>Assistant Network Administrator (Field Attachment), Barmedas.com Ltd</h3>
+        <p>Supported LAN infrastructure and fiber optic installations, gaining practical experience in enterprise network administration.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-date">2022 — 2024</div>
+        <h3>Diploma in Information Technology, CBE Mwanza</h3>
+        <p>Coursework spanning networking, programming (C++), web design, business statistics, and information governance.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-date">2018 — 2021</div>
+        <h3>Nyamagana Secondary School</h3>
+        <p>Completed secondary education, building the foundation for further IT studies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Projects</div>
+      <h2>Selected Work</h2>
+      <p>A few of the systems I've designed and built end-to-end.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">Healthcare</span>
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="Afya Karibu health appointment booking system">
+        </div>
+        <div class="project-body">
+          <h3>Afya Karibu</h3>
+          <p>Community health appointment booking system built for Wilaya ya Nyamagana.</p>
+          <div class="project-stack"><span>React</span><span>Node.js</span><span>SQLite</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">Healthcare</span>
+          <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=700&q=80" alt="Hospital appointment management system">
+        </div>
+        <div class="project-body">
+          <h3>Hospital Appointment Management System</h3>
+          <p>Full-stack platform with role-based dashboards for admin, doctor, and patient — 33-file architecture.</p>
+          <div class="project-stack"><span>PHP</span><span>MySQL</span><span>XAMPP</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">Real Estate</span>
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=700&q=80" alt="Kibo Homes apartment booking website">
+        </div>
+        <div class="project-body">
+          <h3>Kibo Homes</h3>
+          <p>Apartment booking system with M-Pesa/card payment flows, admin dashboard, and TZS pricing.</p>
+          <div class="project-stack"><span>HTML/CSS/JS</span><span>Payments</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">Business</span>
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=700&q=80" alt="Buga Tech Solutions business website">
+        </div>
+        <div class="project-body">
+          <h3>Buga Tech Solutions Website</h3>
+          <p>Business website with services, portfolio, WhatsApp integration, and Google Maps location.</p>
+          <div class="project-stack"><span>HTML/CSS</span><span>No-JS</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">E-Commerce</span>
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80" alt="Tanzania e-commerce platform research">
+        </div>
+        <div class="project-body">
+          <h3>Tanzania E-Commerce Concept</h3>
+          <p>Research-driven concept for a small-business e-commerce platform: WhatsApp-first ordering and Swahili UX.</p>
+          <div class="project-stack"><span>Research</span><span>UX</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">Networking</span>
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80" alt="Office network cabling project">
+        </div>
+        <div class="project-body">
+          <h3>Office Network Deployments</h3>
+          <p>Structured cabling, Wi-Fi rollout, and subnet planning for small office clients in Mwanza.</p>
+          <div class="project-stack"><span>LAN/WAN</span><span>Subnetting</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="client-band">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Client Work — Buga Tech Solutions</div>
+      <h2>Services I Deliver for Clients</h2>
+      <p>Through Buga Tech Solutions, I offer these services to businesses and individuals across Tanzania.</p>
+    </div>
+    <div class="client-grid">
+      <div class="client-card reveal"><h3>Website Design</h3><p>Business, booking, and e-commerce sites.</p></div>
+      <div class="client-card reveal"><h3>Network Solutions</h3><p>LAN/WAN, Wi-Fi, structured cabling.</p></div>
+      <div class="client-card reveal"><h3>CCTV Installation</h3><p>Cameras with remote phone monitoring.</p></div>
+      <div class="client-card reveal"><h3>Software Installation</h3><p>OS setup, licensing, troubleshooting.</p></div>
+      <div class="client-card reveal"><h3>Computer Repair</h3><p>Hardware diagnostics, data recovery.</p></div>
+      <div class="client-card reveal"><h3>IT Support &amp; Training</h3><p>Remote/on-site support and staff training.</p></div>
+    </div>
+    <div class="client-cta reveal">
+      <a href="https://wa.me/255684068567" target="_blank" rel="noopener" class="btn btn-primary">Hire Buga Tech Solutions →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's Work Together</h2>
+      <p>Open to freelance projects, IT support contracts, and full-time opportunities.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-list reveal">
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg></div>
+          <div><strong>Email</strong><a href="mailto:elishamanchare@gmail.com">elishamanchare@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.79.66 2.63a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.45-1.23a2 2 0 012.11-.45c.84.32 1.73.54 2.63.66A2 2 0 0122 16.92z"/></svg></div>
+          <div><strong>Phone</strong><a href="tel:+255684068567">0684 068 567</a> / <a href="tel:+255764686118">0764 686 118</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><strong>Location</strong><span>Mwanza, Tanzania</span></div>
+        </div>
+        <div class="social-row">
+          <a href="https://x.com/ElishaMan123" target="_blank" rel="noopener" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 3H21l-6.5 7.43L22 21h-6.19l-4.85-6.34L5.4 21H2.6l6.96-7.95L2 3h6.34l4.38 5.79L18.24 3zm-1.08 16.17h1.53L7.9 4.74H6.25l10.91 14.43z"/></svg></a>
+          <a href="https://linkedin.com/in/elisha-manchare" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 018 0v8"/></svg></a>
+          <a href="https://instagram.com/h.o.d_buga" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="https://wa.me/255684068567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.13L2 22l5.15-1.53a9.9 9.9 0 004.89 1.28h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0012.04 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="reveal">
+        <form action="mailto:elishamanchare@gmail.com" method="get" enctype="text/plain" style="display:flex; flex-direction:column; gap:12px;">
+          <input type="text" name="Name" placeholder="Your Name" required style="padding:13px 14px;border-radius:9px;border:1px solid var(--border);background:var(--bg-alt);font-family:inherit;">
+          <input type="email" name="Email" placeholder="Your Email" required style="padding:13px 14px;border-radius:9px;border:1px solid var(--border);background:var(--bg-alt);font-family:inherit;">
+          <textarea name="Message" placeholder="Tell me about your project..." required style="padding:13px 14px;border-radius:9px;border:1px solid var(--border);background:var(--bg-alt);min-height:110px;font-family:inherit;resize:vertical;"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <strong>Elisha Manchare</strong> · Mwanza, Tanzania · © 2026 · Built with HTML &amp; CSS
+  </div>
+</footer>
+
+</body>
+</html>
